@@ -6,8 +6,6 @@ class ProgettiScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    ColorScheme colorScheme = Theme.of(context).colorScheme;
-
     return const Center(
       child: Text("ProgettiScreen"),
     );

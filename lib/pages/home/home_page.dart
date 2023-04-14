@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/models/home_tab_model.dart';
-import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/screen/annunci_screen.dart';
+import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/screen/annunci/annunci_screen.dart';
+import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/screen/preferiti_screen.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/screen/progetti_screen.dart';
 
 final indexTabProvider = StateProvider<int>((ref) => 0);
@@ -12,13 +13,18 @@ final indexTabProvider = StateProvider<int>((ref) => 0);
 final List<HomeTab> tabList = [
   HomeTab(
     label: "Annunci",
-    icon: Icons.newspaper,
+    icon: Icons.topic,
     content: const AnnunciScreen(),
   ),
   HomeTab(
     label: "Progetti",
-    icon: Icons.grid_view,
+    icon: Icons.person,
     content: const ProgettiScreen(),
+  ),
+  HomeTab(
+    label: "Preferiti",
+    icon: Icons.stars,
+    content: const PreferitiScreen(),
   ),
 ];
 
