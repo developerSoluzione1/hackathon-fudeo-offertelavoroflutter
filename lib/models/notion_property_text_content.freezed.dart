@@ -22,7 +22,7 @@ NotionPropertyTextContent _$NotionPropertyTextContentFromJson(
 /// @nodoc
 mixin _$NotionPropertyTextContent {
   String get content => throw _privateConstructorUsedError;
-  String? get link => throw _privateConstructorUsedError;
+  NotionPropertyTextContentUrl? get link => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -36,7 +36,9 @@ abstract class $NotionPropertyTextContentCopyWith<$Res> {
           $Res Function(NotionPropertyTextContent) then) =
       _$NotionPropertyTextContentCopyWithImpl<$Res, NotionPropertyTextContent>;
   @useResult
-  $Res call({String content, String? link});
+  $Res call({String content, NotionPropertyTextContentUrl? link});
+
+  $NotionPropertyTextContentUrlCopyWith<$Res>? get link;
 }
 
 /// @nodoc
@@ -64,8 +66,20 @@ class _$NotionPropertyTextContentCopyWithImpl<$Res,
       link: freezed == link
           ? _value.link
           : link // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as NotionPropertyTextContentUrl?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NotionPropertyTextContentUrlCopyWith<$Res>? get link {
+    if (_value.link == null) {
+      return null;
+    }
+
+    return $NotionPropertyTextContentUrlCopyWith<$Res>(_value.link!, (value) {
+      return _then(_value.copyWith(link: value) as $Val);
+    });
   }
 }
 
@@ -78,7 +92,10 @@ abstract class _$$_NotionPropertyTextContentCopyWith<$Res>
       __$$_NotionPropertyTextContentCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String content, String? link});
+  $Res call({String content, NotionPropertyTextContentUrl? link});
+
+  @override
+  $NotionPropertyTextContentUrlCopyWith<$Res>? get link;
 }
 
 /// @nodoc
@@ -105,7 +122,7 @@ class __$$_NotionPropertyTextContentCopyWithImpl<$Res>
       link: freezed == link
           ? _value.link
           : link // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as NotionPropertyTextContentUrl?,
     ));
   }
 }
@@ -121,7 +138,7 @@ class _$_NotionPropertyTextContent implements _NotionPropertyTextContent {
   @override
   final String content;
   @override
-  final String? link;
+  final NotionPropertyTextContentUrl? link;
 
   @override
   String toString() {
@@ -159,7 +176,7 @@ class _$_NotionPropertyTextContent implements _NotionPropertyTextContent {
 abstract class _NotionPropertyTextContent implements NotionPropertyTextContent {
   const factory _NotionPropertyTextContent(
       {required final String content,
-      final String? link}) = _$_NotionPropertyTextContent;
+      final NotionPropertyTextContentUrl? link}) = _$_NotionPropertyTextContent;
 
   factory _NotionPropertyTextContent.fromJson(Map<String, dynamic> json) =
       _$_NotionPropertyTextContent.fromJson;
@@ -167,7 +184,7 @@ abstract class _NotionPropertyTextContent implements NotionPropertyTextContent {
   @override
   String get content;
   @override
-  String? get link;
+  NotionPropertyTextContentUrl? get link;
   @override
   @JsonKey(ignore: true)
   _$$_NotionPropertyTextContentCopyWith<_$_NotionPropertyTextContent>

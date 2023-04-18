@@ -14,7 +14,7 @@ _$_NotionPageProperty _$$_NotionPagePropertyFromJson(
       title: (json['title'] as List<dynamic>?)
           ?.map((e) => NotionPropertyText.fromJson(e as Map<String, dynamic>))
           .toList(),
-      richText: (json['richText'] as List<dynamic>?)
+      richText: (json['rich_text'] as List<dynamic>?)
           ?.map((e) => NotionPropertyText.fromJson(e as Map<String, dynamic>))
           .toList(),
       select: json['select'] == null
@@ -28,7 +28,7 @@ Map<String, dynamic> _$$_NotionPagePropertyToJson(
     <String, dynamic>{
       'id': instance.id,
       'type': instance.type,
-      'title': instance.title,
-      'richText': instance.richText,
-      'select': instance.select,
+      'title': instance.title?.map((e) => e.toJson()).toList(),
+      'rich_text': instance.richText?.map((e) => e.toJson()).toList(),
+      'select': instance.select?.toJson(),
     };

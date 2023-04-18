@@ -21,8 +21,8 @@ NotionPropertyText _$NotionPropertyTextFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$NotionPropertyText {
   String get type => throw _privateConstructorUsedError;
-  NotionPropertyTextContent get text => throw _privateConstructorUsedError;
-  NotionPropertyTextAnnotation get annotations =>
+  NotionPropertyTextContent? get text => throw _privateConstructorUsedError;
+  NotionPropertyTextAnnotation? get annotations =>
       throw _privateConstructorUsedError;
   String? get plainText => throw _privateConstructorUsedError;
   String? get href => throw _privateConstructorUsedError;
@@ -41,13 +41,13 @@ abstract class $NotionPropertyTextCopyWith<$Res> {
   @useResult
   $Res call(
       {String type,
-      NotionPropertyTextContent text,
-      NotionPropertyTextAnnotation annotations,
+      NotionPropertyTextContent? text,
+      NotionPropertyTextAnnotation? annotations,
       String? plainText,
       String? href});
 
-  $NotionPropertyTextContentCopyWith<$Res> get text;
-  $NotionPropertyTextAnnotationCopyWith<$Res> get annotations;
+  $NotionPropertyTextContentCopyWith<$Res>? get text;
+  $NotionPropertyTextAnnotationCopyWith<$Res>? get annotations;
 }
 
 /// @nodoc
@@ -64,8 +64,8 @@ class _$NotionPropertyTextCopyWithImpl<$Res, $Val extends NotionPropertyText>
   @override
   $Res call({
     Object? type = null,
-    Object? text = null,
-    Object? annotations = null,
+    Object? text = freezed,
+    Object? annotations = freezed,
     Object? plainText = freezed,
     Object? href = freezed,
   }) {
@@ -74,14 +74,14 @@ class _$NotionPropertyTextCopyWithImpl<$Res, $Val extends NotionPropertyText>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      text: null == text
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as NotionPropertyTextContent,
-      annotations: null == annotations
+              as NotionPropertyTextContent?,
+      annotations: freezed == annotations
           ? _value.annotations
           : annotations // ignore: cast_nullable_to_non_nullable
-              as NotionPropertyTextAnnotation,
+              as NotionPropertyTextAnnotation?,
       plainText: freezed == plainText
           ? _value.plainText
           : plainText // ignore: cast_nullable_to_non_nullable
@@ -95,16 +95,24 @@ class _$NotionPropertyTextCopyWithImpl<$Res, $Val extends NotionPropertyText>
 
   @override
   @pragma('vm:prefer-inline')
-  $NotionPropertyTextContentCopyWith<$Res> get text {
-    return $NotionPropertyTextContentCopyWith<$Res>(_value.text, (value) {
+  $NotionPropertyTextContentCopyWith<$Res>? get text {
+    if (_value.text == null) {
+      return null;
+    }
+
+    return $NotionPropertyTextContentCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $NotionPropertyTextAnnotationCopyWith<$Res> get annotations {
-    return $NotionPropertyTextAnnotationCopyWith<$Res>(_value.annotations,
+  $NotionPropertyTextAnnotationCopyWith<$Res>? get annotations {
+    if (_value.annotations == null) {
+      return null;
+    }
+
+    return $NotionPropertyTextAnnotationCopyWith<$Res>(_value.annotations!,
         (value) {
       return _then(_value.copyWith(annotations: value) as $Val);
     });
@@ -121,15 +129,15 @@ abstract class _$$_NotionPropertyTextCopyWith<$Res>
   @useResult
   $Res call(
       {String type,
-      NotionPropertyTextContent text,
-      NotionPropertyTextAnnotation annotations,
+      NotionPropertyTextContent? text,
+      NotionPropertyTextAnnotation? annotations,
       String? plainText,
       String? href});
 
   @override
-  $NotionPropertyTextContentCopyWith<$Res> get text;
+  $NotionPropertyTextContentCopyWith<$Res>? get text;
   @override
-  $NotionPropertyTextAnnotationCopyWith<$Res> get annotations;
+  $NotionPropertyTextAnnotationCopyWith<$Res>? get annotations;
 }
 
 /// @nodoc
@@ -144,8 +152,8 @@ class __$$_NotionPropertyTextCopyWithImpl<$Res>
   @override
   $Res call({
     Object? type = null,
-    Object? text = null,
-    Object? annotations = null,
+    Object? text = freezed,
+    Object? annotations = freezed,
     Object? plainText = freezed,
     Object? href = freezed,
   }) {
@@ -154,14 +162,14 @@ class __$$_NotionPropertyTextCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      text: null == text
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as NotionPropertyTextContent,
-      annotations: null == annotations
+              as NotionPropertyTextContent?,
+      annotations: freezed == annotations
           ? _value.annotations
           : annotations // ignore: cast_nullable_to_non_nullable
-              as NotionPropertyTextAnnotation,
+              as NotionPropertyTextAnnotation?,
       plainText: freezed == plainText
           ? _value.plainText
           : plainText // ignore: cast_nullable_to_non_nullable
@@ -179,8 +187,8 @@ class __$$_NotionPropertyTextCopyWithImpl<$Res>
 class _$_NotionPropertyText implements _NotionPropertyText {
   const _$_NotionPropertyText(
       {required this.type,
-      required this.text,
-      required this.annotations,
+      this.text,
+      this.annotations,
       this.plainText,
       this.href});
 
@@ -190,9 +198,9 @@ class _$_NotionPropertyText implements _NotionPropertyText {
   @override
   final String type;
   @override
-  final NotionPropertyTextContent text;
+  final NotionPropertyTextContent? text;
   @override
-  final NotionPropertyTextAnnotation annotations;
+  final NotionPropertyTextAnnotation? annotations;
   @override
   final String? plainText;
   @override
@@ -240,8 +248,8 @@ class _$_NotionPropertyText implements _NotionPropertyText {
 abstract class _NotionPropertyText implements NotionPropertyText {
   const factory _NotionPropertyText(
       {required final String type,
-      required final NotionPropertyTextContent text,
-      required final NotionPropertyTextAnnotation annotations,
+      final NotionPropertyTextContent? text,
+      final NotionPropertyTextAnnotation? annotations,
       final String? plainText,
       final String? href}) = _$_NotionPropertyText;
 
@@ -251,9 +259,9 @@ abstract class _NotionPropertyText implements NotionPropertyText {
   @override
   String get type;
   @override
-  NotionPropertyTextContent get text;
+  NotionPropertyTextContent? get text;
   @override
-  NotionPropertyTextAnnotation get annotations;
+  NotionPropertyTextAnnotation? get annotations;
   @override
   String? get plainText;
   @override

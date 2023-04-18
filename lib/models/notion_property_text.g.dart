@@ -10,10 +10,14 @@ _$_NotionPropertyText _$$_NotionPropertyTextFromJson(
         Map<String, dynamic> json) =>
     _$_NotionPropertyText(
       type: json['type'] as String,
-      text: NotionPropertyTextContent.fromJson(
-          json['text'] as Map<String, dynamic>),
-      annotations: NotionPropertyTextAnnotation.fromJson(
-          json['annotations'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : NotionPropertyTextContent.fromJson(
+              json['text'] as Map<String, dynamic>),
+      annotations: json['annotations'] == null
+          ? null
+          : NotionPropertyTextAnnotation.fromJson(
+              json['annotations'] as Map<String, dynamic>),
       plainText: json['plainText'] as String?,
       href: json['href'] as String?,
     );

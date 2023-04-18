@@ -11,8 +11,8 @@ part 'notion_property_text.g.dart';
 class NotionPropertyText with _$NotionPropertyText {
   const factory NotionPropertyText({
     required String type,
-    required NotionPropertyTextContent text,
-    required NotionPropertyTextAnnotation annotations,
+    NotionPropertyTextContent? text,
+    NotionPropertyTextAnnotation? annotations,
     String? plainText,
     String? href,
   }) = _NotionPropertyText;

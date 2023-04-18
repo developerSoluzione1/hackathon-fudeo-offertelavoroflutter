@@ -10,8 +10,8 @@ _$_NotionPage _$$_NotionPageFromJson(Map<String, dynamic> json) =>
     _$_NotionPage(
       object: json['object'] as String?,
       id: json['id'] as String?,
-      createdTime: json['createdTime'] as String?,
-      lastEditedTime: json['lastEditedTime'] as String?,
+      createdTime: json['created_time'] as String?,
+      lastEditedTime: json['last_edited_time'] as String?,
       properties: (json['properties'] as Map<String, dynamic>?)?.map(
         (k, e) =>
             MapEntry(k, NotionPageProperty.fromJson(e as Map<String, dynamic>)),
@@ -23,8 +23,8 @@ Map<String, dynamic> _$$_NotionPageToJson(_$_NotionPage instance) =>
     <String, dynamic>{
       'object': instance.object,
       'id': instance.id,
-      'createdTime': instance.createdTime,
-      'lastEditedTime': instance.lastEditedTime,
+      'created_time': instance.createdTime,
+      'last_edited_time': instance.lastEditedTime,
       'properties': instance.properties,
       'url': instance.url,
     };

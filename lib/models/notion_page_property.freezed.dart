@@ -23,6 +23,7 @@ mixin _$NotionPageProperty {
   String get id => throw _privateConstructorUsedError;
   String get type => throw _privateConstructorUsedError;
   List<NotionPropertyText>? get title => throw _privateConstructorUsedError;
+  @JsonKey(name: "rich_text")
   List<NotionPropertyText>? get richText => throw _privateConstructorUsedError;
   NotionPropertySelect? get select => throw _privateConstructorUsedError;
 
@@ -42,7 +43,7 @@ abstract class $NotionPagePropertyCopyWith<$Res> {
       {String id,
       String type,
       List<NotionPropertyText>? title,
-      List<NotionPropertyText>? richText,
+      @JsonKey(name: "rich_text") List<NotionPropertyText>? richText,
       NotionPropertySelect? select});
 
   $NotionPropertySelectCopyWith<$Res>? get select;
@@ -116,7 +117,7 @@ abstract class _$$_NotionPagePropertyCopyWith<$Res>
       {String id,
       String type,
       List<NotionPropertyText>? title,
-      List<NotionPropertyText>? richText,
+      @JsonKey(name: "rich_text") List<NotionPropertyText>? richText,
       NotionPropertySelect? select});
 
   @override
@@ -166,13 +167,14 @@ class __$$_NotionPagePropertyCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_NotionPageProperty implements _NotionPageProperty {
   const _$_NotionPageProperty(
       {required this.id,
       required this.type,
       final List<NotionPropertyText>? title,
-      final List<NotionPropertyText>? richText,
+      @JsonKey(name: "rich_text") final List<NotionPropertyText>? richText,
       this.select})
       : _title = title,
         _richText = richText;
@@ -196,6 +198,7 @@ class _$_NotionPageProperty implements _NotionPageProperty {
 
   final List<NotionPropertyText>? _richText;
   @override
+  @JsonKey(name: "rich_text")
   List<NotionPropertyText>? get richText {
     final value = _richText;
     if (value == null) return null;
@@ -254,7 +257,7 @@ abstract class _NotionPageProperty implements NotionPageProperty {
       {required final String id,
       required final String type,
       final List<NotionPropertyText>? title,
-      final List<NotionPropertyText>? richText,
+      @JsonKey(name: "rich_text") final List<NotionPropertyText>? richText,
       final NotionPropertySelect? select}) = _$_NotionPageProperty;
 
   factory _NotionPageProperty.fromJson(Map<String, dynamic> json) =
@@ -267,6 +270,7 @@ abstract class _NotionPageProperty implements NotionPageProperty {
   @override
   List<NotionPropertyText>? get title;
   @override
+  @JsonKey(name: "rich_text")
   List<NotionPropertyText>? get richText;
   @override
   NotionPropertySelect? get select;

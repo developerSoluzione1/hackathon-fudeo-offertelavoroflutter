@@ -26,9 +26,11 @@ NotionPage _$NotionPageFromJson(
 mixin _$NotionPage {
   String? get object => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: "created_time")
   String? get createdTime => throw _privateConstructorUsedError;
+  @JsonKey(name: "last_edited_time")
   String? get lastEditedTime =>
-      throw _privateConstructorUsedError; //TODO createdBy, lastEditBy, cover, icon, parent, archived
+      throw _privateConstructorUsedError; //TODO cover, icon, parent, archived
   Map<String, NotionPageProperty>? get properties =>
       throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
@@ -48,8 +50,8 @@ abstract class $NotionPageCopyWith<$Res> {
   $Res call(
       {String? object,
       String? id,
-      String? createdTime,
-      String? lastEditedTime,
+      @JsonKey(name: "created_time") String? createdTime,
+      @JsonKey(name: "last_edited_time") String? lastEditedTime,
       Map<String, NotionPageProperty>? properties,
       String? url});
 }
@@ -114,8 +116,8 @@ abstract class _$$_NotionPageCopyWith<$Res>
   $Res call(
       {String? object,
       String? id,
-      String? createdTime,
-      String? lastEditedTime,
+      @JsonKey(name: "created_time") String? createdTime,
+      @JsonKey(name: "last_edited_time") String? lastEditedTime,
       Map<String, NotionPageProperty>? properties,
       String? url});
 }
@@ -173,8 +175,8 @@ class _$_NotionPage implements _NotionPage {
   const _$_NotionPage(
       {this.object,
       this.id,
-      this.createdTime,
-      this.lastEditedTime,
+      @JsonKey(name: "created_time") this.createdTime,
+      @JsonKey(name: "last_edited_time") this.lastEditedTime,
       final Map<String, NotionPageProperty>? properties,
       this.url})
       : _properties = properties;
@@ -191,12 +193,14 @@ class _$_NotionPage implements _NotionPage {
   @override
   final String? id;
   @override
+  @JsonKey(name: "created_time")
   final String? createdTime;
   @override
+  @JsonKey(name: "last_edited_time")
   final String? lastEditedTime;
-//TODO createdBy, lastEditBy, cover, icon, parent, archived
+//TODO cover, icon, parent, archived
   final Map<String, NotionPageProperty>? _properties;
-//TODO createdBy, lastEditBy, cover, icon, parent, archived
+//TODO cover, icon, parent, archived
   @override
   Map<String, NotionPageProperty>? get properties {
     final value = _properties;
@@ -253,8 +257,8 @@ abstract class _NotionPage implements NotionPage {
   const factory _NotionPage(
       {final String? object,
       final String? id,
-      final String? createdTime,
-      final String? lastEditedTime,
+      @JsonKey(name: "created_time") final String? createdTime,
+      @JsonKey(name: "last_edited_time") final String? lastEditedTime,
       final Map<String, NotionPageProperty>? properties,
       final String? url}) = _$_NotionPage;
 
@@ -267,10 +271,12 @@ abstract class _NotionPage implements NotionPage {
   @override
   String? get id;
   @override
+  @JsonKey(name: "created_time")
   String? get createdTime;
   @override
+  @JsonKey(name: "last_edited_time")
   String? get lastEditedTime;
-  @override //TODO createdBy, lastEditBy, cover, icon, parent, archived
+  @override //TODO cover, icon, parent, archived
   Map<String, NotionPageProperty>? get properties;
   @override
   String? get url;
