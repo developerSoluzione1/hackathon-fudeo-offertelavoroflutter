@@ -2,29 +2,22 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:soluzione1_hackathon_fudeo_flutter/models/notion_page.dart';
+import 'package:soluzione1_hackathon_fudeo_flutter/models/annuncio.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/utils/utils.dart' as mutils;
 
 class SingleAnnuncioPage extends StatelessWidget {
   SingleAnnuncioPage({super.key, required this.annuncio});
 
-  final NotionPage annuncio;
-
-  late String annuncioName;
-  late String contrattoName;
-  late String contrattoColor;
-  late String teamName;
-  late String teamColor;
+  final Annuncio annuncio;
+  late String nomeAzienda;
 
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
 
-    annuncioName = annuncio.properties!["Name"]!.title!.first.text.content;
-    contrattoName = annuncio.properties!["Contratto"]!.select!.name;
-    contrattoColor = annuncio.properties!["Contratto"]!.select!.color;
-    teamName = annuncio.properties!["Team"]!.select!.name;
-    teamColor = annuncio.properties!["Team"]!.select!.color;
+    // nomeAzienda =
+    //     annuncio.properties!["Nome azienda"]!.richText!.first.plainText ??
+    //         annuncio.properties!["Nome azienda"]!.richText!.first.text.content;
 
     return Scaffold(
       appBar: AppBar(
@@ -36,39 +29,56 @@ class SingleAnnuncioPage extends StatelessWidget {
       body: ListView(
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 24,
+              vertical: 16,
+            ),
             child: Text(
-              annuncioName,
-              style: textTheme.headlineMedium,
-              textAlign: TextAlign.center,
+              annuncio.title,
+              style: textTheme.titleLarge,
+              textAlign: TextAlign.start,
             ),
           ),
           ListTile(
             title: const Text("Team"),
             trailing: Chip(
               side: BorderSide(
-                color: mutils.getColorForSelect(teamColor),
+                color: mutils.getColorForSelect(
+                  annuncio.teamColor,
+                ),
               ),
               label: Text(
-                teamName,
-                style:
-                    TextStyle(color: mutils.getLabelColorForSelect(teamColor)),
+                annuncio.teamName,
+                style: TextStyle(
+                  color: mutils.getLabelColorForSelect(
+                    annuncio.teamColor,
+                  ),
+                ),
               ),
-              backgroundColor: mutils.getColorForSelect(teamColor),
+              backgroundColor: mutils.getColorForSelect(
+                annuncio.teamColor,
+              ),
             ),
           ),
           ListTile(
             title: const Text("Contratto"),
             trailing: Chip(
               side: BorderSide(
-                color: mutils.getColorForSelect(contrattoColor),
+                color: mutils.getColorForSelect(
+                  annuncio.contrattoColor,
+                ),
               ),
               label: Text(
-                contrattoName,
+                annuncio.contrattoName,
                 style: TextStyle(
-                    color: mutils.getLabelColorForSelect(contrattoColor)),
+                  color: mutils.getLabelColorForSelect(
+                    annuncio.contrattoColor,
+                  ),
+                ),
               ),
-              backgroundColor: mutils.getColorForSelect(contrattoColor),
+              backgroundColor: mutils.getColorForSelect(
+                annuncio.contrattoColor,
+              ),
             ),
           )
         ],
