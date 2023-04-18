@@ -6,18 +6,13 @@ import 'package:soluzione1_hackathon_fudeo_flutter/models/annuncio.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/utils/utils.dart' as mutils;
 
 class SingleAnnuncioPage extends StatelessWidget {
-  SingleAnnuncioPage({super.key, required this.annuncio});
+  const SingleAnnuncioPage({super.key, required this.annuncio});
 
   final Annuncio annuncio;
-  late String nomeAzienda;
 
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
-
-    // nomeAzienda =
-    //     annuncio.properties!["Nome azienda"]!.richText!.first.plainText ??
-    //         annuncio.properties!["Nome azienda"]!.richText!.first.text.content;
 
     return Scaffold(
       appBar: AppBar(
