@@ -8,10 +8,10 @@ part of 'notion_page.dart';
 
 _$_NotionPage _$$_NotionPageFromJson(Map<String, dynamic> json) =>
     _$_NotionPage(
-      object: json['object'] as String?,
-      id: json['id'] as String?,
-      createdTime: json['created_time'] as String?,
-      lastEditedTime: json['last_edited_time'] as String?,
+      object: json['object'] as String,
+      id: json['id'] as String,
+      createdTime: json['created_time'] as String,
+      lastEditedTime: json['last_edited_time'] as String,
       properties: (json['properties'] as Map<String, dynamic>?)?.map(
         (k, e) =>
             MapEntry(k, NotionPageProperty.fromJson(e as Map<String, dynamic>)),

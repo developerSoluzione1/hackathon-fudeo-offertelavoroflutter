@@ -13,7 +13,7 @@ class NotionPropertyText with _$NotionPropertyText {
     required String type,
     NotionPropertyTextContent? text,
     NotionPropertyTextAnnotation? annotations,
-    String? plainText,
+    @JsonKey(name: "plain_text") String? plainText,
     String? href,
   }) = _NotionPropertyText;
 

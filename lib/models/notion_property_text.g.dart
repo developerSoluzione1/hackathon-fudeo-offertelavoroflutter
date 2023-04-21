@@ -18,7 +18,7 @@ _$_NotionPropertyText _$$_NotionPropertyTextFromJson(
           ? null
           : NotionPropertyTextAnnotation.fromJson(
               json['annotations'] as Map<String, dynamic>),
-      plainText: json['plainText'] as String?,
+      plainText: json['plain_text'] as String?,
       href: json['href'] as String?,
     );
 
@@ -28,6 +28,6 @@ Map<String, dynamic> _$$_NotionPropertyTextToJson(
       'type': instance.type,
       'text': instance.text,
       'annotations': instance.annotations,
-      'plainText': instance.plainText,
+      'plain_text': instance.plainText,
       'href': instance.href,
     };

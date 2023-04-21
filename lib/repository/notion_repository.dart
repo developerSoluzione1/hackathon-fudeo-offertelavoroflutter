@@ -13,6 +13,7 @@ class NotionRepository {
     var response = await http.post(
       Uri.parse('${Env.notionBaseUrl}/${Env.notionDBAnnunci}/query'),
       headers: request_headers.getNotionHeaders(),
+      body: '{"page_size": 100}',
     );
 
     //TODO: Gestisci timeout e response diverso da 200

@@ -24,12 +24,12 @@ NotionPage _$NotionPageFromJson(
 
 /// @nodoc
 mixin _$NotionPage {
-  String? get object => throw _privateConstructorUsedError;
-  String? get id => throw _privateConstructorUsedError;
+  String get object => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(name: "created_time")
-  String? get createdTime => throw _privateConstructorUsedError;
+  String get createdTime => throw _privateConstructorUsedError;
   @JsonKey(name: "last_edited_time")
-  String? get lastEditedTime =>
+  String get lastEditedTime =>
       throw _privateConstructorUsedError; //TODO cover, icon, parent, archived
   Map<String, NotionPageProperty>? get properties =>
       throw _privateConstructorUsedError;
@@ -48,10 +48,10 @@ abstract class $NotionPageCopyWith<$Res> {
       _$NotionPageCopyWithImpl<$Res, NotionPage>;
   @useResult
   $Res call(
-      {String? object,
-      String? id,
-      @JsonKey(name: "created_time") String? createdTime,
-      @JsonKey(name: "last_edited_time") String? lastEditedTime,
+      {String object,
+      String id,
+      @JsonKey(name: "created_time") String createdTime,
+      @JsonKey(name: "last_edited_time") String lastEditedTime,
       Map<String, NotionPageProperty>? properties,
       String? url});
 }
@@ -69,30 +69,30 @@ class _$NotionPageCopyWithImpl<$Res, $Val extends NotionPage>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? object = freezed,
-    Object? id = freezed,
-    Object? createdTime = freezed,
-    Object? lastEditedTime = freezed,
+    Object? object = null,
+    Object? id = null,
+    Object? createdTime = null,
+    Object? lastEditedTime = null,
     Object? properties = freezed,
     Object? url = freezed,
   }) {
     return _then(_value.copyWith(
-      object: freezed == object
+      object: null == object
           ? _value.object
           : object // ignore: cast_nullable_to_non_nullable
-              as String?,
-      id: freezed == id
+              as String,
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      createdTime: freezed == createdTime
+              as String,
+      createdTime: null == createdTime
           ? _value.createdTime
           : createdTime // ignore: cast_nullable_to_non_nullable
-              as String?,
-      lastEditedTime: freezed == lastEditedTime
+              as String,
+      lastEditedTime: null == lastEditedTime
           ? _value.lastEditedTime
           : lastEditedTime // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       properties: freezed == properties
           ? _value.properties
           : properties // ignore: cast_nullable_to_non_nullable
@@ -114,10 +114,10 @@ abstract class _$$_NotionPageCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String? object,
-      String? id,
-      @JsonKey(name: "created_time") String? createdTime,
-      @JsonKey(name: "last_edited_time") String? lastEditedTime,
+      {String object,
+      String id,
+      @JsonKey(name: "created_time") String createdTime,
+      @JsonKey(name: "last_edited_time") String lastEditedTime,
       Map<String, NotionPageProperty>? properties,
       String? url});
 }
@@ -133,30 +133,30 @@ class __$$_NotionPageCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? object = freezed,
-    Object? id = freezed,
-    Object? createdTime = freezed,
-    Object? lastEditedTime = freezed,
+    Object? object = null,
+    Object? id = null,
+    Object? createdTime = null,
+    Object? lastEditedTime = null,
     Object? properties = freezed,
     Object? url = freezed,
   }) {
     return _then(_$_NotionPage(
-      object: freezed == object
+      object: null == object
           ? _value.object
           : object // ignore: cast_nullable_to_non_nullable
-              as String?,
-      id: freezed == id
+              as String,
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      createdTime: freezed == createdTime
+              as String,
+      createdTime: null == createdTime
           ? _value.createdTime
           : createdTime // ignore: cast_nullable_to_non_nullable
-              as String?,
-      lastEditedTime: freezed == lastEditedTime
+              as String,
+      lastEditedTime: null == lastEditedTime
           ? _value.lastEditedTime
           : lastEditedTime // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       properties: freezed == properties
           ? _value._properties
           : properties // ignore: cast_nullable_to_non_nullable
@@ -173,10 +173,10 @@ class __$$_NotionPageCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_NotionPage implements _NotionPage {
   const _$_NotionPage(
-      {this.object,
-      this.id,
-      @JsonKey(name: "created_time") this.createdTime,
-      @JsonKey(name: "last_edited_time") this.lastEditedTime,
+      {required this.object,
+      required this.id,
+      @JsonKey(name: "created_time") required this.createdTime,
+      @JsonKey(name: "last_edited_time") required this.lastEditedTime,
       final Map<String, NotionPageProperty>? properties,
       this.url})
       : _properties = properties;
@@ -189,15 +189,15 @@ class _$_NotionPage implements _NotionPage {
       );
 
   @override
-  final String? object;
+  final String object;
   @override
-  final String? id;
+  final String id;
   @override
   @JsonKey(name: "created_time")
-  final String? createdTime;
+  final String createdTime;
   @override
   @JsonKey(name: "last_edited_time")
-  final String? lastEditedTime;
+  final String lastEditedTime;
 //TODO cover, icon, parent, archived
   final Map<String, NotionPageProperty>? _properties;
 //TODO cover, icon, parent, archived
@@ -255,10 +255,10 @@ class _$_NotionPage implements _NotionPage {
 
 abstract class _NotionPage implements NotionPage {
   const factory _NotionPage(
-      {final String? object,
-      final String? id,
-      @JsonKey(name: "created_time") final String? createdTime,
-      @JsonKey(name: "last_edited_time") final String? lastEditedTime,
+      {required final String object,
+      required final String id,
+      @JsonKey(name: "created_time") required final String createdTime,
+      @JsonKey(name: "last_edited_time") required final String lastEditedTime,
       final Map<String, NotionPageProperty>? properties,
       final String? url}) = _$_NotionPage;
 
@@ -267,15 +267,15 @@ abstract class _NotionPage implements NotionPage {
   ) = _$_NotionPage.fromJson;
 
   @override
-  String? get object;
+  String get object;
   @override
-  String? get id;
+  String get id;
   @override
   @JsonKey(name: "created_time")
-  String? get createdTime;
+  String get createdTime;
   @override
   @JsonKey(name: "last_edited_time")
-  String? get lastEditedTime;
+  String get lastEditedTime;
   @override //TODO cover, icon, parent, archived
   Map<String, NotionPageProperty>? get properties;
   @override

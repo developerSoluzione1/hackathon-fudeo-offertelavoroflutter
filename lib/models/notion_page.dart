@@ -9,10 +9,10 @@ part 'notion_page.g.dart';
 @Freezed(genericArgumentFactories: true)
 class NotionPage with _$NotionPage {
   const factory NotionPage({
-    String? object,
-    String? id,
-    @JsonKey(name: "created_time") String? createdTime,
-    @JsonKey(name: "last_edited_time") String? lastEditedTime,
+    required String object,
+    required String id,
+    @JsonKey(name: "created_time") required String createdTime,
+    @JsonKey(name: "last_edited_time") required String lastEditedTime,
     //TODO cover, icon, parent, archived
     Map<String, NotionPageProperty>? properties,
     String? url,

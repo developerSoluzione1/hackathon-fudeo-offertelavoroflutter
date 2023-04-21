@@ -23,7 +23,7 @@ final List<HomeTab> tabList = [
   ),
   HomeTab(
     label: "Preferiti",
-    icon: Icons.stars,
+    icon: Icons.favorite_border,
     content: const PreferitiScreen(),
   ),
 ];
