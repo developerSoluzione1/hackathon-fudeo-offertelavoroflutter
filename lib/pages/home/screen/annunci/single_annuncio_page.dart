@@ -7,7 +7,7 @@ import 'package:soluzione1_hackathon_fudeo_flutter/models/annuncio.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/pages/ui/descrizione_row.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/screen/annunci/ui/annuncio_filter_row.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/screen/annunci/ui/annuncio_row_info_row.dart';
-import 'package:soluzione1_hackathon_fudeo_flutter/utils/colors.dart';
+import 'package:soluzione1_hackathon_fudeo_flutter/pages/ui/share_bottom_link.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/utils/utils.dart' as mutils;
 
 class SingleAnnuncioPage extends StatelessWidget {
@@ -137,29 +137,9 @@ class SingleAnnuncioPage extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
-            height: 72,
-            child: GestureDetector(
-              onTap: () => {mutils.launchURL(annuncio.hrefOfferta)},
-              child: Container(
-                decoration: BoxDecoration(
-                  color: BrandColors.primaryColor,
-                  borderRadius: const BorderRadius.all(
-                    Radius.circular(4),
-                  ),
-                ),
-                margin: const EdgeInsets.all(12),
-                child: Center(
-                  child: Text(
-                    context.loc.linkAnnuncioBtn,
-                    style: TextStyle(
-                      color: BrandColors.onPrimaryColor,
-                      fontSize: 18,
-                    ),
-                  ),
-                ),
-              ),
-            ),
+          ShareBottomLink(
+            label: context.loc.linkAnnuncioBtn,
+            urlToShare: annuncio.hrefOfferta,
           ),
         ],
       ),
