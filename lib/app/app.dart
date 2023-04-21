@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/app/router.dart';
 
 class App extends StatelessWidget {
@@ -18,6 +19,7 @@ class App extends StatelessWidget {
         colorSchemeSeed: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         brightness: Brightness.light,
+        textTheme: GoogleFonts.poppinsTextTheme(),
       ),
       title: 'Hackathon Fudeo',
     );
