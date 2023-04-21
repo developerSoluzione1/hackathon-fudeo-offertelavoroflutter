@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/models/annuncio.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/screen/annunci/ui/annuncio_descrizione_row.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/screen/annunci/ui/annuncio_filter_row.dart';
@@ -13,6 +14,27 @@ class SingleAnnuncioPage extends StatelessWidget {
   const SingleAnnuncioPage({super.key, required this.annuncio});
 
   final Annuncio annuncio;
+
+  void _shareAnnuncio(BuildContext context) {
+    showModalBottomSheet<void>(
+      context: context,
+      builder: (context) => Container(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            QrImage(
+              size: mutils.getScreenHeight(context) * .3,
+              padding: const EdgeInsets.all(16),
+              data: annuncio.hrefOfferta,
+              version: QrVersions.auto,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,11 +49,18 @@ class SingleAnnuncioPage extends StatelessWidget {
             icon: const Icon(Icons.favorite_border),
             onPressed: () => {},
           ),
+          IconButton(
+            icon: const Icon(Icons.copy_outlined),
+            onPressed: () {
+              mutils.copyToClipboard(annuncio.hrefOfferta);
+              mutils.showToast("Link all'offerta copiato");
+            },
+          ),
           Padding(
             padding: const EdgeInsets.only(right: 8),
             child: IconButton(
               icon: const Icon(Icons.share),
-              onPressed: () => {},
+              onPressed: () => _shareAnnuncio(context),
             ),
           )
         ],

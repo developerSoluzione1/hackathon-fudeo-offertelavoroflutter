@@ -7,7 +7,7 @@ class BrandColors {
   // e.g. invoke `BrandColors()` accidentally
   BrandColors._();
 
-  static Color backgroundCardColor = Color(int.parse('FFF3F1F7', radix: 16));
+  static Color backgroundCardColor = Color(int.parse('FFF2F5F9', radix: 16));
 
   static Color primaryTextColor = Color(int.parse('FF212121', radix: 16));
   static Color primaryLightTextColor = Color(int.parse('FF333333', radix: 16));

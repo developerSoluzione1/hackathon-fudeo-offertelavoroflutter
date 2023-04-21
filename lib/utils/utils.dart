@@ -1,4 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:intl/intl.dart';
 
@@ -50,4 +54,26 @@ void launchURL(String urlToLaunch) async {
 
 String formatDatetimeToDisplay(DateTime datetime, String format) {
   return DateFormat(format).format(datetime);
+}
+
+double getScreenWidth(BuildContext context) {
+  return MediaQuery.of(context).size.width;
+}
+
+double getScreenHeight(BuildContext context) {
+  return MediaQuery.of(context).size.height;
+}
+
+void showToast(String message) {
+  if (Platform.isAndroid || Platform.isIOS) {
+    Fluttertoast.showToast(
+      msg: message,
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.BOTTOM,
+    );
+  }
+}
+
+void copyToClipboard(String stringToCopy) {
+  Clipboard.setData(ClipboardData(text: stringToCopy));
 }
