@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:intl/intl.dart';
 
 Color getColorForSelect(String colorLabel) {
   switch (colorLabel) {
@@ -34,4 +36,18 @@ Color getLabelColorForSelect(String colorLabel) {
     default:
       return const Color(0xFFF5F5F5);
   }
+}
+
+//Open the browser with the url provided
+void launchURL(String urlToLaunch) async {
+  if (!await launchUrl(
+    Uri.parse(urlToLaunch),
+    mode: LaunchMode.externalApplication,
+  )) {
+    throw Exception('Could not launch $urlToLaunch');
+  }
+}
+
+String formatDatetimeToDisplay(DateTime datetime, String format) {
+  return DateFormat(format).format(datetime);
 }
