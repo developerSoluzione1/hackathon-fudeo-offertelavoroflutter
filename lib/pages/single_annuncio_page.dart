@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:qr_flutter/qr_flutter.dart';
+import 'package:soluzione1_hackathon_fudeo_flutter/localization/app_localizations_context.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/models/annuncio.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/screen/annunci/ui/annuncio_descrizione_row.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/screen/annunci/ui/annuncio_filter_row.dart';
@@ -53,7 +54,7 @@ class SingleAnnuncioPage extends StatelessWidget {
             icon: const Icon(Icons.copy_outlined),
             onPressed: () {
               mutils.copyToClipboard(annuncio.hrefOfferta);
-              mutils.showToast("Link all'offerta copiato");
+              mutils.showToast(context.loc.labelLinkOffertaCopiato);
             },
           ),
           Padding(
@@ -133,14 +134,14 @@ class SingleAnnuncioPage extends StatelessWidget {
                     color: annuncio.seniorityColor,
                     label: annuncio.seniorityName,
                   ),
-                const Padding(
-                  padding: EdgeInsets.only(
+                Padding(
+                  padding: const EdgeInsets.only(
                     top: 18,
                     bottom: 16,
                   ),
                   child: Text(
-                    "Descrizione offerta",
-                    style: TextStyle(
+                    context.loc.descrizioneOffertaLabel,
+                    style: const TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 16,
                     ),
@@ -170,7 +171,7 @@ class SingleAnnuncioPage extends StatelessWidget {
                 margin: const EdgeInsets.all(12),
                 child: Center(
                   child: Text(
-                    "Vai all'annuncio",
+                    context.loc.linkAnnuncionBtn,
                     style: TextStyle(
                       color: BrandColors.onPrimaryColor,
                       fontSize: 18,
@@ -179,7 +180,7 @@ class SingleAnnuncioPage extends StatelessWidget {
                 ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );

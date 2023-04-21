@@ -98,12 +98,5 @@ class AnnuncioRow extends StatelessWidget {
         ),
       ),
     );
-
-    // ListTile(
-    //   title: Text(annuncio.title),
-    //   onTap: () {
-    //     context.push('/annuncio/single', extra: annuncio);
-    //   },
-    // );
   }
 }
