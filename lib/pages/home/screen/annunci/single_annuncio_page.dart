@@ -2,10 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:qr_flutter/qr_flutter.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/localization/app_localizations_context.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/models/annuncio.dart';
-import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/screen/annunci/ui/annuncio_descrizione_row.dart';
+import 'package:soluzione1_hackathon_fudeo_flutter/pages/ui/descrizione_row.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/screen/annunci/ui/annuncio_filter_row.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/screen/annunci/ui/annuncio_row_info_row.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/utils/colors.dart';
@@ -15,27 +14,6 @@ class SingleAnnuncioPage extends StatelessWidget {
   const SingleAnnuncioPage({super.key, required this.annuncio});
 
   final Annuncio annuncio;
-
-  void _shareAnnuncio(BuildContext context) {
-    showModalBottomSheet<void>(
-      context: context,
-      builder: (context) => Container(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            QrImage(
-              size: mutils.getScreenHeight(context) * .3,
-              padding: const EdgeInsets.all(16),
-              data: annuncio.hrefOfferta,
-              version: QrVersions.auto,
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,14 +32,15 @@ class SingleAnnuncioPage extends StatelessWidget {
             icon: const Icon(Icons.copy_outlined),
             onPressed: () {
               mutils.copyToClipboard(annuncio.hrefOfferta);
-              mutils.showToast(context.loc.labelLinkOffertaCopiato);
+              mutils.showToast(context.loc.labelLinkAnnuncioCopiato);
             },
           ),
           Padding(
             padding: const EdgeInsets.only(right: 8),
             child: IconButton(
               icon: const Icon(Icons.share),
-              onPressed: () => _shareAnnuncio(context),
+              onPressed: () => mutils.showModalShareLinkQrCode(
+                  context, annuncio.hrefOfferta),
             ),
           )
         ],
@@ -93,12 +72,13 @@ class SingleAnnuncioPage extends StatelessWidget {
                   isWithIcon: true,
                   size: 18,
                 ),
-                AnnuncioRowInfoRow(
-                  label: annuncio.localita,
-                  icon: Icons.location_on,
-                  isWithIcon: true,
-                  size: 18,
-                ),
+                if (annuncio.localita.isNotEmpty)
+                  AnnuncioRowInfoRow(
+                    label: annuncio.localita,
+                    icon: Icons.location_on,
+                    isWithIcon: true,
+                    size: 18,
+                  ),
                 if (annuncio.retribuzione.isNotEmpty)
                   AnnuncioRowInfoRow(
                     label: annuncio.retribuzione,
@@ -148,8 +128,8 @@ class SingleAnnuncioPage extends StatelessWidget {
                   ),
                 ),
                 if (annuncio.descrizioneList.isNotEmpty)
-                  AnnuncioDescrizioneRow(
-                    descrizioneList: annuncio.descrizioneList,
+                  DescrizioneRow(
+                    rowsList: annuncio.descrizioneList,
                   ),
                 const SizedBox(
                   height: 16,
@@ -171,7 +151,7 @@ class SingleAnnuncioPage extends StatelessWidget {
                 margin: const EdgeInsets.all(12),
                 child: Center(
                   child: Text(
-                    context.loc.linkAnnuncionBtn,
+                    context.loc.linkAnnuncioBtn,
                     style: TextStyle(
                       color: BrandColors.onPrimaryColor,
                       fontSize: 18,

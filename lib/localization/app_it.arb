@@ -6,9 +6,13 @@
     "homeTabLabelPreferiti": "Preferiti",
 
     "descrizioneOffertaLabel": "Descrizione offerta",
-    "linkAnnuncionBtn": "Vai all'annuncio",
+    "linkAnnuncioBtn": "Vai all'annuncio",
+    "labelLinkAnnuncioCopiato": "Link all'annuncio copiato",
 
-    "labelLinkOffertaCopiato": "Link all'offerta copiato",
+    "settingsPageTitle": "Impostazioni",
 
-    "settingsPageTitle": "Impostazioni"
+    "linkProgettoBtn": "Vai al progetto",
+    "labelLinkProgettoCopiato": "Link al progetto copiato",
+    "descrizioneProgettoLabel": "Descrizione del progetto",
+    "richiestaProgettoLabel": "Richiesta di lavoro"
 }

@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/models/descrizione.dart';
 
-class AnnuncioDescrizioneRow extends StatelessWidget {
-  const AnnuncioDescrizioneRow({super.key, required this.descrizioneList});
+class DescrizioneRow extends StatelessWidget {
+  const DescrizioneRow({super.key, required this.rowsList});
 
-  final List<Descrizione> descrizioneList;
+  final List<Descrizione> rowsList;
 
   @override
   Widget build(BuildContext context) {
     return RichText(
       text: TextSpan(
         text: "",
-        children: descrizioneList.map(
+        children: rowsList.map(
           (single) {
             return TextSpan(
               text: single.text,
-              style: TextStyle(
+              style: GoogleFonts.poppins(
                 color: Colors.black87,
                 fontWeight: single.isBold ? FontWeight.bold : FontWeight.normal,
                 fontStyle:
@@ -27,7 +28,5 @@ class AnnuncioDescrizioneRow extends StatelessWidget {
         ).toList(),
       ),
     );
-
-    //Text(descrizioneList.length.toString());
   }
 }

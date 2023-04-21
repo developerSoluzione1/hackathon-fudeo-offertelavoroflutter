@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:intl/intl.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 
 Color getColorForSelect(String colorLabel) {
   switch (colorLabel) {
@@ -76,4 +77,25 @@ void showToast(String message) {
 
 void copyToClipboard(String stringToCopy) {
   Clipboard.setData(ClipboardData(text: stringToCopy));
+}
+
+void showModalShareLinkQrCode(BuildContext context, String linkToShare) {
+  showModalBottomSheet<void>(
+    context: context,
+    builder: (context) => Container(
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          QrImage(
+            size: getScreenHeight(context) * .3,
+            padding: const EdgeInsets.all(16),
+            data: linkToShare,
+            version: QrVersions.auto,
+          ),
+        ],
+      ),
+    ),
+  );
 }

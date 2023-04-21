@@ -16,7 +16,18 @@ class NotionRepository {
       body: '{"page_size": 100}',
     );
 
-    //TODO: Gestisci timeout e response diverso da 200
+    final responseBodyParsed = json.decode(response.body);
+    return responseBodyParsed["results"]
+        .map<NotionPage>((json) => NotionPage.fromJson(json))
+        .toList();
+  }
+
+  Future<List<NotionPage>?> getProgettiFreelanceList() async {
+    var response = await http.post(
+      Uri.parse('${Env.notionBaseUrl}/${Env.notionDBProgetti}/query'),
+      headers: request_headers.getNotionHeaders(),
+      body: '{"page_size": 100}',
+    );
 
     final responseBodyParsed = json.decode(response.body);
     return responseBodyParsed["results"]

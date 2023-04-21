@@ -22,4 +22,22 @@ final annunciLavoroListProvider =
 );
 
 typedef AnnunciLavoroListRef = AutoDisposeFutureProviderRef<List<NotionPage>?>;
+String _$progettiFreelanceListHash() =>
+    r'300ea8416b622984b1e6988823b151858bf46618';
+
+/// See also [progettiFreelanceList].
+@ProviderFor(progettiFreelanceList)
+final progettiFreelanceListProvider =
+    AutoDisposeFutureProvider<List<NotionPage>?>.internal(
+  progettiFreelanceList,
+  name: r'progettiFreelanceListProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$progettiFreelanceListHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef ProgettiFreelanceListRef
+    = AutoDisposeFutureProviderRef<List<NotionPage>?>;
 // ignore_for_file: unnecessary_raw_strings, subtype_of_sealed_class, invalid_use_of_internal_member, do_not_use_environment, prefer_const_constructors, public_member_api_docs, avoid_private_typedef_functions

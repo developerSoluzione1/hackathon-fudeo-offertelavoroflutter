@@ -8,3 +8,9 @@ part 'notion_provider.g.dart';
 Future<List<NotionPage>?> annunciLavoroList(AnnunciLavoroListRef ref) async {
   return NotionRepository().getAnnunciLavoroList();
 }
+
+@riverpod
+Future<List<NotionPage>?> progettiFreelanceList(
+    ProgettiFreelanceListRef ref) async {
+  return NotionRepository().getProgettiFreelanceList();
+}

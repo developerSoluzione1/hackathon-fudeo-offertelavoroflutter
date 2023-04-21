@@ -7,7 +7,7 @@ import 'package:soluzione1_hackathon_fudeo_flutter/localization/app_localization
 import 'package:soluzione1_hackathon_fudeo_flutter/models/home_tab_model.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/screen/annunci/annunci_screen.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/screen/preferiti_screen.dart';
-import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/screen/progetti_screen.dart';
+import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/screen/progetti/progetti_screen.dart';
 
 final indexTabProvider = StateProvider<int>((ref) => 0);
 

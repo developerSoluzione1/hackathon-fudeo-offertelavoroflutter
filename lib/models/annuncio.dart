@@ -18,8 +18,6 @@ class Annuncio {
   late DateTime createdTime;
   late DateTime lastEditedTime;
 
-  //Qualifica
-
   Annuncio();
 
   Annuncio.fromNotionPage(NotionPage notionPage) {
