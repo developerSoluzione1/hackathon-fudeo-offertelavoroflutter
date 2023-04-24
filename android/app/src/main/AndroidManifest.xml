@@ -10,10 +10,15 @@
         <category android:name="android.intent.category.BROWSABLE" />
         <data android:scheme="https" />
       </intent>
+      <intent-filter>
+        <action android:name="android.intent.action.SENDTO" />
+        <data android:scheme="mailto" />
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
     </queries>
     
    <application
-        android:label="soluzione1_hackathon_fudeo_flutter"
+        android:label="Hackathon Fudeo"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

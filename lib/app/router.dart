@@ -2,7 +2,7 @@ import 'package:go_router/go_router.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/models/annuncio.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/models/progetto.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/home_page.dart';
-import 'package:soluzione1_hackathon_fudeo_flutter/pages/settings_page.dart';
+import 'package:soluzione1_hackathon_fudeo_flutter/pages/about_page.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/screen/annunci/single_annuncio_page.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/screen/progetti/single_progetto_page.dart';
 
@@ -26,8 +26,8 @@ GoRouter buildRouter() {
         ),
       ),
       GoRoute(
-        path: '/settings',
-        builder: (context, state) => const SettingsPage(),
+        path: '/about',
+        builder: (context, state) => const AboutPage(),
       ),
     ],
   );

@@ -1,5 +1,5 @@
 name: soluzione1_hackathon_fudeo_flutter
-description: A new Flutter project.
+description: Applicazione per l'Hackathon Fudeo per Offertelavoroflutter.it
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
@@ -23,6 +23,7 @@ dependencies:
   http: ^0.13.5
   intl: ^0.17.0
   json_annotation: ^4.8.0
+  package_info_plus: ^3.1.0
   qr_flutter: ^4.0.0
   riverpod_annotation: ^2.0.4
   url_launcher: ^6.1.10
