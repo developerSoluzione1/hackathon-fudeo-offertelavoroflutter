@@ -1,16 +1,27 @@
-# soluzione1_hackathon_fudeo_flutter
+<div align="center">
+  <h1>Hackathon Fudeo</h1>
+  <p align="center">
+  <a href="https://dart.dev/"><img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white"></a>
+  <a href="https://flutter.dev/"><img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white"></a>
+  </p>
+</div>
 
-A new Flutter project.
+Applicazione realizzata da [Soluzione1](https://www.soluzione1.it/) per l'[Hackathon Flutter](https://www.fudeo.it/blog/hackathon-flutter-offertelavoroflutter) organizzata da [Fudeo](https://www.fudeo.it/) svoltosi dal 1 aprile fino al 1 maggio 2023, che prevedeva la realizzazione di una applicazione per visualizzare gli annunci di lavoro presi dal sito [Offertelavoroflutter.it](https://offertelavoroflutter.it/).
 
-## Getting Started
+### 💎 Features
 
-This project is a starting point for a Flutter application.
+* [X] Visualizzazione lista degli annunci
+* [X] Visualizzazione del singolo annuncio
+* [X] Visualizzazione lista di progetti
+* [X] Visualizzazione del singolo progetto
+* [X] About page con le informazioni sulla app
 
-A few resources to get you started if this is your first Flutter project:
+### 📱 Screenshots
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+| Lista Annunci | Lista progetti | 
+|-|-|
+| <img src="screenshots/lista_annunci.png"> | <img src="screenshots/lista_progetti.png"> | 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| Singolo Annuncio | About | 
+|-|-|
+| <img src="screenshots/single_annuncio.png"> | <img src="screenshots/about.png"> | 
