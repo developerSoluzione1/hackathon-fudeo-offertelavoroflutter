@@ -18,10 +18,10 @@ Applicazione realizzata da [Soluzione1](https://www.soluzione1.it/) per l'[Hacka
 
 ### 📱 Screenshots
 
-| Lista Annunci | Lista progetti | 
-|-|-|
-| <img src="screenshots/lista_annunci.png"> | <img src="screenshots/lista_progetti.png"> | 
+| Splash Screen | Lista Annunci | Lista progetti | 
+|-|-|-|
+| <img src="screenshots/splash_screen.png"> | <img src="screenshots/lista_annunci.png"> | <img src="screenshots/lista_progetti.png"> | 
 
-| Singolo Annuncio | About | 
-|-|-|
-| <img src="screenshots/single_annuncio.png"> | <img src="screenshots/about.png"> | 
+| Singolo Annuncio | Singolo Annuncio | About | 
+|-|-|-|
+| <img src="screenshots/single_annuncio.png"> | <img src="screenshots/single_progetto.png"> | <img src="screenshots/about.png"> | 
