@@ -20,12 +20,12 @@ class HomePage extends ConsumerWidget {
     List<HomeTab> tabList = [
       HomeTab(
         label: context.loc.homeTabLabelAnnunci,
-        icon: Icons.topic,
+        icon: Icons.campaign,
         content: const AnnunciScreen(),
       ),
       HomeTab(
         label: context.loc.homeTabLabelProgetti,
-        icon: Icons.person,
+        icon: Icons.construction_outlined,
         content: const ProgettiScreen(),
       ),
     ];

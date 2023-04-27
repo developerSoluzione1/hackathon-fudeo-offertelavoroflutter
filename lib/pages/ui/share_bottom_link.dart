@@ -19,7 +19,7 @@ class ShareBottomLink extends StatelessWidget {
           decoration: BoxDecoration(
             color: BrandColors.primaryColor,
             borderRadius: const BorderRadius.all(
-              Radius.circular(4),
+              Radius.circular(8),
             ),
           ),
           margin: const EdgeInsets.all(12),

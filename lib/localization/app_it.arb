@@ -20,5 +20,9 @@
     "linkProgettoBtn": "Vai al progetto",
     "labelLinkProgettoCopiato": "Link al progetto copiato",
     "descrizioneProgettoLabel": "Descrizione del progetto",
+    "tempisticheProgettoLabel": "Tempistiche",
+    "budgetProgettoLabel": "Budget",
+    "tempistichePagamentoProgettoLabel": "Tempistiche di pagamento",
+
     "richiestaProgettoLabel": "Richiesta di lavoro"
 }

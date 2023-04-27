@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/localization/app_localizations_context.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/models/annuncio.dart';
-import 'package:soluzione1_hackathon_fudeo_flutter/pages/ui/descrizione_row.dart';
-import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/screen/annunci/ui/annuncio_filter_row.dart';
-import 'package:soluzione1_hackathon_fudeo_flutter/pages/ui/annuncio_row_info_row.dart';
+import 'package:soluzione1_hackathon_fudeo_flutter/pages/ui/filter_row.dart';
+import 'package:soluzione1_hackathon_fudeo_flutter/pages/ui/row_info_row.dart';
+import 'package:soluzione1_hackathon_fudeo_flutter/pages/ui/descrizione_section.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/pages/ui/share_bottom_link.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/utils/utils.dart' as mutils;
 
@@ -68,20 +68,18 @@ class SingleAnnuncioPage extends StatelessWidget {
                   isWithIcon: true,
                   size: 18,
                 ),
-                if (annuncio.localita.isNotEmpty)
-                  RowInfoRow(
-                    label: annuncio.localita,
-                    icon: Icons.location_on,
-                    isWithIcon: true,
-                    size: 18,
-                  ),
-                if (annuncio.retribuzione.isNotEmpty)
-                  RowInfoRow(
-                    label: annuncio.retribuzione,
-                    icon: Icons.payment_outlined,
-                    isWithIcon: true,
-                    size: 18,
-                  ),
+                RowInfoRow(
+                  label: annuncio.localita,
+                  icon: Icons.location_on,
+                  isWithIcon: true,
+                  size: 18,
+                ),
+                RowInfoRow(
+                  label: annuncio.retribuzione,
+                  icon: Icons.payment_outlined,
+                  isWithIcon: true,
+                  size: 18,
+                ),
                 RowInfoRow(
                   label: mutils.formatDatetimeToDisplay(
                       annuncio.createdTime, "d MMMM yyyy"),
@@ -92,41 +90,25 @@ class SingleAnnuncioPage extends StatelessWidget {
                 const SizedBox(
                   height: 12,
                 ),
-                if (annuncio.teamName.isNotEmpty)
-                  AnnuncioFilterRow(
-                    icon: Icons.location_on,
-                    color: annuncio.teamColor,
-                    label: annuncio.teamName,
-                  ),
-                if (annuncio.contrattoName.isNotEmpty)
-                  AnnuncioFilterRow(
-                    icon: Icons.work_history,
-                    color: annuncio.contrattoColor,
-                    label: annuncio.contrattoName,
-                  ),
-                if (annuncio.seniorityName.isNotEmpty)
-                  AnnuncioFilterRow(
-                    icon: Icons.workspace_premium,
-                    color: annuncio.seniorityColor,
-                    label: annuncio.seniorityName,
-                  ),
-                Padding(
-                  padding: const EdgeInsets.only(
-                    top: 18,
-                    bottom: 16,
-                  ),
-                  child: Text(
-                    context.loc.descrizioneOffertaLabel,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 16,
-                    ),
-                  ),
+                FilterRow(
+                  icon: Icons.location_on,
+                  color: annuncio.teamColor,
+                  label: annuncio.teamName,
                 ),
-                if (annuncio.descrizioneList.isNotEmpty)
-                  DescrizioneRow(
-                    rowsList: annuncio.descrizioneList,
-                  ),
+                FilterRow(
+                  icon: Icons.work_history,
+                  color: annuncio.contrattoColor,
+                  label: annuncio.contrattoName,
+                ),
+                FilterRow(
+                  icon: Icons.workspace_premium,
+                  color: annuncio.seniorityColor,
+                  label: annuncio.seniorityName,
+                ),
+                DescrizioneSection(
+                  title: context.loc.descrizioneOffertaLabel,
+                  rowsList: annuncio.descrizioneList,
+                ),
                 const SizedBox(
                   height: 16,
                 )

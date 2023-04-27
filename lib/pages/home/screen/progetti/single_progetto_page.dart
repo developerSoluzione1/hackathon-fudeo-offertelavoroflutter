@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/localization/app_localizations_context.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/models/progetto.dart';
-import 'package:soluzione1_hackathon_fudeo_flutter/pages/ui/annuncio_row_info_row.dart';
-import 'package:soluzione1_hackathon_fudeo_flutter/pages/ui/descrizione_row.dart';
+import 'package:soluzione1_hackathon_fudeo_flutter/pages/ui/filter_row.dart';
+import 'package:soluzione1_hackathon_fudeo_flutter/pages/ui/row_info_row.dart';
+import 'package:soluzione1_hackathon_fudeo_flutter/pages/ui/descrizione_section.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/pages/ui/share_bottom_link.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/utils/utils.dart' as mutils;
 
@@ -68,40 +69,34 @@ class SingleProgettoPage extends StatelessWidget {
                   isWithIcon: true,
                   size: 18,
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(
-                    top: 18,
-                    bottom: 16,
-                  ),
-                  child: Text(
-                    context.loc.descrizioneProgettoLabel,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 16,
-                    ),
-                  ),
+                const SizedBox(
+                  height: 12,
                 ),
-                if (progetto.descrizioneList.isNotEmpty)
-                  DescrizioneRow(
-                    rowsList: progetto.descrizioneList,
-                  ),
-                Padding(
-                  padding: const EdgeInsets.only(
-                    top: 18,
-                    bottom: 16,
-                  ),
-                  child: Text(
-                    context.loc.richiestaProgettoLabel,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 16,
-                    ),
-                  ),
+                FilterRow(
+                  icon: Icons.groups,
+                  color: progetto.tipoRelazioneColor,
+                  label: progetto.tipoRelazioneName,
                 ),
-                if (progetto.richiestaList.isNotEmpty)
-                  DescrizioneRow(
-                    rowsList: progetto.richiestaList,
-                  ),
+                DescrizioneSection(
+                  title: context.loc.descrizioneProgettoLabel,
+                  rowsList: progetto.descrizioneList,
+                ),
+                DescrizioneSection(
+                  title: context.loc.richiestaProgettoLabel,
+                  rowsList: progetto.richiestaList,
+                ),
+                DescrizioneSection(
+                  title: context.loc.tempisticheProgettoLabel,
+                  rowsList: progetto.tempisticheList,
+                ),
+                DescrizioneSection(
+                  title: context.loc.budgetProgettoLabel,
+                  rowsList: progetto.budgetList,
+                ),
+                DescrizioneSection(
+                  title: context.loc.tempistichePagamentoProgettoLabel,
+                  rowsList: progetto.tempistichePagamentoList,
+                ),
                 const SizedBox(
                   height: 16,
                 )

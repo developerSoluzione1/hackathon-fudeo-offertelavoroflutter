@@ -7,8 +7,8 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:intl/intl.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
-Color getColorForSelect(String colorLabel) {
-  switch (colorLabel) {
+Color getColorForSelect(String color) {
+  switch (color) {
     case 'blue':
       return const Color(0xFFBBDEFB);
     case 'red':
@@ -29,8 +29,8 @@ Color getColorForSelect(String colorLabel) {
   }
 }
 
-Color getLabelColorForSelect(String colorLabel) {
-  switch (colorLabel) {
+Color getLabelColorForSelect(String color) {
+  switch (color) {
     case 'blue':
       return const Color(0xFF1A237E);
     case 'red':
@@ -47,7 +47,7 @@ Color getLabelColorForSelect(String colorLabel) {
       return const Color(0xFF4C2337);
     case 'default':
     default:
-      return const Color(0xFFF5F5F5);
+      return const Color(0xFF212121);
   }
 }
 

@@ -5,6 +5,9 @@ class Progetto {
   late String title;
   List<Descrizione> richiestaList = [];
   List<Descrizione> descrizioneList = [];
+  List<Descrizione> budgetList = [];
+  List<Descrizione> tempisticheList = [];
+  List<Descrizione> tempistichePagamentoList = [];
   String hrefProgetto = '';
   String ndaName = '';
   String ndaColor = '';
@@ -36,6 +39,26 @@ class Progetto {
         .properties!["Descrizione del progetto"]!.richText!.isNotEmpty) {
       descrizioneList = notionPage
           .properties!["Descrizione del progetto"]!.richText!
+          .map((single) => Descrizione.fromNotionPropertyText(single))
+          .toList();
+    }
+
+    if (notionPage.properties!["Budget"]!.richText!.isNotEmpty) {
+      budgetList = notionPage.properties!["Budget"]!.richText!
+          .map((single) => Descrizione.fromNotionPropertyText(single))
+          .toList();
+    }
+
+    if (notionPage.properties!["Tempistiche"]!.richText!.isNotEmpty) {
+      tempisticheList = notionPage.properties!["Tempistiche"]!.richText!
+          .map((single) => Descrizione.fromNotionPropertyText(single))
+          .toList();
+    }
+
+    if (notionPage
+        .properties!["Tempistiche di pagamento"]!.richText!.isNotEmpty) {
+      tempistichePagamentoList = notionPage
+          .properties!["Tempistiche di pagamento"]!.richText!
           .map((single) => Descrizione.fromNotionPropertyText(single))
           .toList();
     }

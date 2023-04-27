@@ -9,6 +9,8 @@ class BrandColors {
 
   static Color backgroundCardColor = Color(int.parse('FFF2F5F9', radix: 16));
 
+  static Color whiteColor = Color(int.parse('FFFFFFFF', radix: 16));
+
   static Color primaryTextColor = Color(int.parse('FF212121', radix: 16));
   static Color primaryLightTextColor = Color(int.parse('FF333333', radix: 16));
   static Color primaryDarkTextColor = Color(int.parse('FF000000', radix: 16));
