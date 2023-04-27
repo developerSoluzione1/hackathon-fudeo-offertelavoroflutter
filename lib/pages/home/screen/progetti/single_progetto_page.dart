@@ -23,10 +23,6 @@ class SingleProgettoPage extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.favorite_border),
-            onPressed: () => {},
-          ),
-          IconButton(
             icon: const Icon(Icons.copy_outlined),
             onPressed: () {
               mutils.copyToClipboard(progetto.hrefProgetto);
