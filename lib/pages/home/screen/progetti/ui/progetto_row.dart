@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/models/progetto.dart';
+import 'package:soluzione1_hackathon_fudeo_flutter/pages/ui/filter_badge.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/utils/colors.dart';
 
 class ProgettoRow extends StatelessWidget {
@@ -33,6 +34,21 @@ class ProgettoRow extends StatelessWidget {
                 fontSize: 18,
               ),
               textAlign: TextAlign.start,
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                if (progetto.tipoRelazioneName.isNotEmpty)
+                  FilterBadge(
+                    color: progetto.tipoRelazioneColor,
+                    label: progetto.tipoRelazioneName,
+                  ),
+              ],
             ),
           ],
         ),

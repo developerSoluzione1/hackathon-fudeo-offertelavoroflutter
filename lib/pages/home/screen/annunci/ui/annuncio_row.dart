@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/models/annuncio.dart';
-import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/screen/annunci/ui/annuncio_filter_badge.dart';
-import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/screen/annunci/ui/annuncio_row_info_row.dart';
+import 'package:soluzione1_hackathon_fudeo_flutter/pages/ui/filter_badge.dart';
+import 'package:soluzione1_hackathon_fudeo_flutter/pages/ui/annuncio_row_info_row.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/utils/colors.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/utils/utils.dart' as mutils;
 
@@ -40,7 +40,7 @@ class AnnuncioRow extends StatelessWidget {
             const SizedBox(
               height: 4,
             ),
-            AnnuncioRowInfoRow(
+            RowInfoRow(
               label: annuncio.aziendaName,
               icon: Icons.domain,
               isWithIcon: true,
@@ -48,7 +48,7 @@ class AnnuncioRow extends StatelessWidget {
             if (annuncio.localita.isNotEmpty)
               Padding(
                 padding: const EdgeInsets.only(top: 4),
-                child: AnnuncioRowInfoRow(
+                child: RowInfoRow(
                   label: annuncio.localita,
                   isWithIcon: true,
                   icon: Icons.location_on,
@@ -57,7 +57,7 @@ class AnnuncioRow extends StatelessWidget {
             const SizedBox(
               height: 4,
             ),
-            AnnuncioRowInfoRow(
+            RowInfoRow(
               label: mutils.formatDatetimeToDisplay(
                   annuncio.createdTime, "d MMMM yyyy"),
               icon: Icons.schedule_outlined,
@@ -72,14 +72,14 @@ class AnnuncioRow extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               children: [
                 if (annuncio.teamName.isNotEmpty)
-                  AnnuncioFilterBadge(
+                  FilterBadge(
                     color: annuncio.teamColor,
                     label: annuncio.teamName,
                   ),
                 if (annuncio.contrattoName.isNotEmpty)
                   Padding(
                     padding: const EdgeInsets.only(left: 8),
-                    child: AnnuncioFilterBadge(
+                    child: FilterBadge(
                       color: annuncio.contrattoColor,
                       label: annuncio.contrattoName,
                     ),
@@ -87,7 +87,7 @@ class AnnuncioRow extends StatelessWidget {
                 if (annuncio.seniorityName.isNotEmpty)
                   Padding(
                     padding: const EdgeInsets.only(left: 8),
-                    child: AnnuncioFilterBadge(
+                    child: FilterBadge(
                       color: annuncio.seniorityColor,
                       label: annuncio.seniorityName,
                     ),

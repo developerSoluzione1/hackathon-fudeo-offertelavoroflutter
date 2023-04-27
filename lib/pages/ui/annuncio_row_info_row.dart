@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/utils/colors.dart';
 
-class AnnuncioRowInfoRow extends StatelessWidget {
-  const AnnuncioRowInfoRow(
+class RowInfoRow extends StatelessWidget {
+  const RowInfoRow(
       {super.key,
       required this.label,
       this.icon,

@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/utils/colors.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/utils/utils.dart' as mutils;
 
-class AnnuncioFilterBadge extends StatelessWidget {
-  const AnnuncioFilterBadge({
+class FilterBadge extends StatelessWidget {
+  const FilterBadge({
     super.key,
     required this.color,
     required this.label,

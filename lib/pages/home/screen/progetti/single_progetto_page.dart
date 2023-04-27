@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/localization/app_localizations_context.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/models/progetto.dart';
+import 'package:soluzione1_hackathon_fudeo_flutter/pages/ui/annuncio_row_info_row.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/pages/ui/descrizione_row.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/pages/ui/share_bottom_link.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/utils/utils.dart' as mutils;
@@ -59,6 +60,13 @@ class SingleProgettoPage extends StatelessWidget {
                     ),
                     textAlign: TextAlign.start,
                   ),
+                ),
+                RowInfoRow(
+                  label: mutils.formatDatetimeToDisplay(
+                      progetto.createdTime, "d MMMM yyyy"),
+                  icon: Icons.schedule_outlined,
+                  isWithIcon: true,
+                  size: 18,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(

@@ -6,7 +6,7 @@ import 'package:soluzione1_hackathon_fudeo_flutter/localization/app_localization
 import 'package:soluzione1_hackathon_fudeo_flutter/models/annuncio.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/pages/ui/descrizione_row.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/screen/annunci/ui/annuncio_filter_row.dart';
-import 'package:soluzione1_hackathon_fudeo_flutter/pages/home/screen/annunci/ui/annuncio_row_info_row.dart';
+import 'package:soluzione1_hackathon_fudeo_flutter/pages/ui/annuncio_row_info_row.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/pages/ui/share_bottom_link.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/utils/utils.dart' as mutils;
 
@@ -62,27 +62,27 @@ class SingleAnnuncioPage extends StatelessWidget {
                     textAlign: TextAlign.start,
                   ),
                 ),
-                AnnuncioRowInfoRow(
+                RowInfoRow(
                   label: annuncio.aziendaName,
                   icon: Icons.domain,
                   isWithIcon: true,
                   size: 18,
                 ),
                 if (annuncio.localita.isNotEmpty)
-                  AnnuncioRowInfoRow(
+                  RowInfoRow(
                     label: annuncio.localita,
                     icon: Icons.location_on,
                     isWithIcon: true,
                     size: 18,
                   ),
                 if (annuncio.retribuzione.isNotEmpty)
-                  AnnuncioRowInfoRow(
+                  RowInfoRow(
                     label: annuncio.retribuzione,
                     icon: Icons.payment_outlined,
                     isWithIcon: true,
                     size: 18,
                   ),
-                AnnuncioRowInfoRow(
+                RowInfoRow(
                   label: mutils.formatDatetimeToDisplay(
                       annuncio.createdTime, "d MMMM yyyy"),
                   icon: Icons.schedule_outlined,

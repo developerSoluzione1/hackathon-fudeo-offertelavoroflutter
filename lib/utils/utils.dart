@@ -19,6 +19,10 @@ Color getColorForSelect(String colorLabel) {
       return const Color(0xFFFFF9C4);
     case 'green':
       return const Color(0xFFC8E6C9);
+    case 'gray':
+      return const Color(0xFFDDDDDD);
+    case 'pink':
+      return const Color(0xFFF5E0E9);
     case 'default':
     default:
       return const Color(0xFFF5F5F5);
@@ -37,6 +41,10 @@ Color getLabelColorForSelect(String colorLabel) {
       return const Color(0xFF424242);
     case 'green':
       return const Color(0xFF1B5E20);
+    case 'gray':
+      return const Color(0xFF212121);
+    case 'pink':
+      return const Color(0xFF4C2337);
     case 'default':
     default:
       return const Color(0xFFF5F5F5);

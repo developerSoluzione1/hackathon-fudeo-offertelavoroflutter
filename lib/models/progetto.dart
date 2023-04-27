@@ -6,6 +6,12 @@ class Progetto {
   List<Descrizione> richiestaList = [];
   List<Descrizione> descrizioneList = [];
   String hrefProgetto = '';
+  String ndaName = '';
+  String ndaColor = '';
+  String tipoRelazioneName = '';
+  String tipoRelazioneColor = '';
+  late DateTime createdTime;
+  late DateTime lastEditedTime;
 
   Progetto();
 
@@ -39,5 +45,20 @@ class Progetto {
               .properties!["Come candidarsi"]!.richText!.first.href ??
           notionPage.properties!["Come candidarsi"]!.richText!.first.plainText!;
     }
+
+    if (notionPage.properties!["NDA"]!.select != null) {
+      ndaName = notionPage.properties!["NDA"]!.select!.name;
+      ndaColor = notionPage.properties!["NDA"]!.select!.color;
+    }
+
+    if (notionPage.properties!["Tipo di relazione"]!.select != null) {
+      tipoRelazioneName =
+          notionPage.properties!["Tipo di relazione"]!.select!.name;
+      tipoRelazioneColor =
+          notionPage.properties!["Tipo di relazione"]!.select!.color;
+    }
+
+    createdTime = DateTime.parse(notionPage.createdTime);
+    lastEditedTime = DateTime.parse(notionPage.lastEditedTime);
   }
 }
