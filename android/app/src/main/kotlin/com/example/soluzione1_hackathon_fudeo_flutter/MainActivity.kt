@@ -1,4 +1,4 @@
-package com.example.soluzione1_hackathon_fudeo_flutter
+package it.soluzione1.hackathonfudeo
 
 import io.flutter.embedding.android.FlutterActivity
 
