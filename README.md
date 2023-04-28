@@ -1,4 +1,5 @@
 <div align="center">
+  <img src="assets/appicon/icon.png" width= 100>
   <h1>Hackathon Fudeo Offertelavoroflutter.it</h1>
   <p align="center">
   <a href="https://dart.dev/"><img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white"></a>
@@ -12,13 +13,18 @@ Applicazione realizzata da [Soluzione1](https://www.soluzione1.it/) per l'[Hacka
 
 * [X] Visualizzazione lista degli annunci
 * [X] Visualizzazione del singolo annuncio
+  * [X] Condivisione annuncio tramite qrcode
+  * [X] Copia del link dell'annuncio
 * [X] Visualizzazione lista di progetti
 * [X] Visualizzazione del singolo progetto
+  * [X] Condivisione progetto tramite qrcode
+  * [X] Copia del link del progetto
 * [X] About page con le informazioni sulla app
   * [X] Link al sito di presentazione
   * [X] Mail alla pagina di supporto
   * [X] Lista delle licenze dei package utilizzati
 * [X] Tema applicazione che si adatta al light/dark mode del dispositivo
+
 ### 📱 Screenshots
 
 | Lista Annunci | Singolo Annuncio | Lista progetti | Singolo progetto | About |  
