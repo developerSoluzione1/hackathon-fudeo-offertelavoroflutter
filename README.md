@@ -25,3 +25,20 @@ Applicazione realizzata da [Soluzione1](https://www.soluzione1.it/) per l'[Hacka
 |-|-|-|-|-|
 | <img src="screenshots/lista_annunci.png"> | <img src="screenshots/single_annuncio.png"> | <img src="screenshots/lista_progetti.png"> | <img src="screenshots/single_progetto.png"> |<img src="screenshots/about.png"> | 
 | <img src="screenshots/lista_annunci_dark.png"> | <img src="screenshots/single_annuncio_dark.png"> | <img src="screenshots/lista_progetti_dark.png"> | <img src="screenshots/single_progetto_dark.png"> |<img src="screenshots/about_dark.png"> | 
+
+## 📋 License
+
+```
+Copyright 2023 Soluzione 1 Srl
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limi
