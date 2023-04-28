@@ -48,6 +48,8 @@ NOTION_API_VERSION="2022-06-28"
 una volta creato il file e aggiunte le variabili corrette è necessario lanciare `build_runner` dando da terminale
 
 ```bash
+flutter clean
+flutter pub get
 flutter pub run build_runner build --delete-conflicting-outputs
 ```
 
