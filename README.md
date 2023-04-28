@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Hackathon Fudeo</h1>
+  <h1>Hackathon Fudeo Offertelavoroflutter.it</h1>
   <p align="center">
   <a href="https://dart.dev/"><img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white"></a>
   <a href="https://flutter.dev/"><img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white"></a>
@@ -15,13 +15,13 @@ Applicazione realizzata da [Soluzione1](https://www.soluzione1.it/) per l'[Hacka
 * [X] Visualizzazione lista di progetti
 * [X] Visualizzazione del singolo progetto
 * [X] About page con le informazioni sulla app
-
+  * [X] Link al sito di presentazione
+  * [X] Mail alla pagina di supporto
+  * [X] Lista delle licenze dei package utilizzati
+* [X] Tema applicazione che si adatta al light/dark mode del dispositivo
 ### 📱 Screenshots
 
-| Splash Screen | Lista Annunci | Lista progetti | 
-|-|-|-|
-| <img src="screenshots/splash_screen.png"> | <img src="screenshots/lista_annunci.png"> | <img src="screenshots/lista_progetti.png"> | 
-
-| Singolo Annuncio | Singolo Annuncio | About | 
-|-|-|-|
-| <img src="screenshots/single_annuncio.png"> | <img src="screenshots/single_progetto.png"> | <img src="screenshots/about.png"> | 
+| Lista Annunci | Singolo Annuncio | Lista progetti | Singolo progetto | About |  
+|-|-|-|-|-|
+| <img src="screenshots/lista_annunci.png"> | <img src="screenshots/single_annuncio.png"> | <img src="screenshots/lista_progetti.png"> | <img src="screenshots/single_progetto.png"> |<img src="screenshots/about.png"> | 
+| <img src="screenshots/lista_annunci_dark.png"> | <img src="screenshots/single_annuncio_dark.png"> | <img src="screenshots/lista_progetti_dark.png"> | <img src="screenshots/single_progetto_dark.png"> |<img src="screenshots/about_dark.png"> | 
