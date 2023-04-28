@@ -32,6 +32,25 @@ Applicazione realizzata da [Soluzione1](https://www.soluzione1.it/) per l'[Hacka
 | <img src="screenshots/lista_annunci.png"> | <img src="screenshots/single_annuncio.png"> | <img src="screenshots/lista_progetti.png"> | <img src="screenshots/single_progetto.png"> |<img src="screenshots/about.png"> | 
 | <img src="screenshots/lista_annunci_dark.png"> | <img src="screenshots/single_annuncio_dark.png"> | <img src="screenshots/lista_progetti_dark.png"> | <img src="screenshots/single_progetto_dark.png"> |<img src="screenshots/about_dark.png"> | 
 
+
+### 🧬 Environment
+
+La struttura del file `.env` da creare nella root del progetto è di questo tipo
+
+```env
+NOTION_BASE_URL="https://api.notion.com/v1/databases"
+NOTION_SECRET_KEY="secret_XXXXX"
+NOTION_DB_ANNUNCI="283d2760f81548f0a7baca4b3e58d7d8"
+NOTION_DB_PROGETTI="e6a8a6760e3d4430b20a15d16f75f92e"
+NOTION_API_VERSION="2022-06-28"
+```
+
+una volta creato il file e aggiunte le variabili corrette è necessario lanciare `build_runner` dando da terminale
+
+```bash
+flutter pub run build_runner build --delete-conflicting-outputs
+```
+
 ## 📋 License
 
 ```
