@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:soluzione1_hackathon_fudeo_flutter/utils/colors.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/utils/utils.dart' as mutils;
 
 class ShareBottomLink extends StatelessWidget {
@@ -11,13 +10,15 @@ class ShareBottomLink extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ColorScheme colorScheme = Theme.of(context).colorScheme;
+
     return SizedBox(
       height: 72,
       child: GestureDetector(
         onTap: () => {mutils.launchURL(urlToShare)},
         child: Container(
           decoration: BoxDecoration(
-            color: BrandColors.primaryColor,
+            color: colorScheme.primaryContainer,
             borderRadius: const BorderRadius.all(
               Radius.circular(8),
             ),
@@ -27,7 +28,7 @@ class ShareBottomLink extends StatelessWidget {
             child: Text(
               label,
               style: TextStyle(
-                color: BrandColors.onPrimaryColor,
+                color: colorScheme.onPrimaryContainer,
                 fontSize: 18,
               ),
             ),

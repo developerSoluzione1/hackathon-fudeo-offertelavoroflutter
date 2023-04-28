@@ -18,8 +18,17 @@ class App extends StatelessWidget {
       routeInformationProvider: router.routeInformationProvider,
       routeInformationParser: router.routeInformationParser,
       routerDelegate: router.routerDelegate,
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       theme: FlexThemeData.light(
+        scheme: FlexScheme.blueM3,
+        useMaterial3: true,
+        swapLegacyOnMaterial3: true,
+        visualDensity: FlexColorScheme.comfortablePlatformDensity,
+        textTheme: GoogleFonts.poppinsTextTheme(
+          Theme.of(context).textTheme,
+        ),
+      ),
+      darkTheme: FlexThemeData.dark(
         scheme: FlexScheme.blueM3,
         useMaterial3: true,
         swapLegacyOnMaterial3: true,

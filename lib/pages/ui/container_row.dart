@@ -16,9 +16,14 @@ class ContainerRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ColorScheme colorScheme = Theme.of(context).colorScheme;
+
     return GestureDetector(
       onTap: () {
-        context.push(route, extra: entity);
+        context.push(
+          route,
+          extra: entity,
+        );
       },
       child: Container(
         margin: const EdgeInsets.symmetric(
@@ -26,7 +31,7 @@ class ContainerRow extends StatelessWidget {
           vertical: 10,
         ),
         padding: const EdgeInsets.all(12),
-        decoration: BrandStyles.containerBoxDecoration,
+        decoration: BrandStyles.getBoxDecoration(colorScheme),
         child: child,
       ),
     );

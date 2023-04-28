@@ -54,11 +54,10 @@ class AnnuncioRow extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: [
-              if (annuncio.teamName.isNotEmpty)
-                FilterBadge(
-                  color: annuncio.teamColor,
-                  label: annuncio.teamName,
-                ),
+              FilterBadge(
+                color: annuncio.teamColor,
+                label: annuncio.teamName,
+              ),
               if (annuncio.contrattoName.isNotEmpty)
                 Padding(
                   padding: const EdgeInsets.only(left: 8),

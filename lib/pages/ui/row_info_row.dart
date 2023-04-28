@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:soluzione1_hackathon_fudeo_flutter/utils/colors.dart';
 
 class RowInfoRow extends StatelessWidget {
   const RowInfoRow(
@@ -16,6 +15,8 @@ class RowInfoRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ColorScheme colorScheme = Theme.of(context).colorScheme;
+
     if (label.isNotEmpty) {
       return Row(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -35,7 +36,7 @@ class RowInfoRow extends StatelessWidget {
               style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: size,
-                color: BrandColors.primaryLightTextColor,
+                color: colorScheme.onBackground,
               ),
               textAlign: TextAlign.start,
             ),

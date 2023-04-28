@@ -9,6 +9,8 @@ class DescrizioneRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ColorScheme colorScheme = Theme.of(context).colorScheme;
+
     return RichText(
       text: TextSpan(
         text: "",
@@ -17,7 +19,7 @@ class DescrizioneRow extends StatelessWidget {
             return TextSpan(
               text: single.text,
               style: GoogleFonts.poppins(
-                color: Colors.black87,
+                color: colorScheme.onBackground,
                 fontWeight: single.isBold ? FontWeight.bold : FontWeight.normal,
                 fontStyle:
                     single.isItalic ? FontStyle.italic : FontStyle.normal,

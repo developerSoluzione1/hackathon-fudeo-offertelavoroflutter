@@ -16,23 +16,27 @@ class FilterBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 12,
-        vertical: 4,
-      ),
-      decoration: BoxDecoration(
-        color: mutils.getColorForSelect(
-          color,
+    if (label.isNotEmpty) {
+      return Container(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 12,
+          vertical: 4,
         ),
-        borderRadius: BorderRadius.circular(50),
-      ),
-      child: Text(
-        label,
-        style: TextStyle(
-          color: BrandColors.primaryTextColor,
+        decoration: BoxDecoration(
+          color: mutils.getColorForSelect(
+            color,
+          ),
+          borderRadius: BorderRadius.circular(50),
         ),
-      ),
-    );
+        child: Text(
+          label,
+          style: const TextStyle(
+            color: Colors.black87,
+          ),
+        ),
+      );
+    } else {
+      return const SizedBox();
+    }
   }
 }
