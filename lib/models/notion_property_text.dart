@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, invalid_annotation_target
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:soluzione1_hackathon_fudeo_flutter/models/notion_property_text_annotation.dart';
