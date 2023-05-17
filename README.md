@@ -40,8 +40,8 @@ La struttura del file `.env` da creare nella root del progetto è di questo tipo
 ```env
 NOTION_BASE_URL="https://api.notion.com/v1/databases"
 NOTION_SECRET_KEY="secret_XXXXX"
-NOTION_DB_ANNUNCI="283d2760f81548f0a7baca4b3e58d7d8"
-NOTION_DB_PROGETTI="e6a8a6760e3d4430b20a15d16f75f92e"
+NOTION_DB_ANNUNCI="YYYYYYYYYY"
+NOTION_DB_PROGETTI="ZZZZZZZZZZ"
 NOTION_API_VERSION="2022-06-28"
 ```
 
